@@ -132,7 +132,7 @@ export default function Home() {
                         </div>
                         <div className="col-md-6">
                             <div className="first-screen-img ">
-                                <img src="/img/img1233.png" className="w-100" alt=""/>
+                                <img src="/img/img1233.png" className="w-100" style={{borderRadius: "10px"}} alt="..."/>
                             </div>
                         </div>
                     </div>
@@ -146,7 +146,7 @@ export default function Home() {
 
                         <div className="col-md-6">
                             <div className="first-screen-img ">
-                                <img src="/img/img1234.jpg" className="w-100" alt=""/>
+                                <img src="/img/img1234.jpg" className="w-100" style={{borderRadius: "10px"}} alt="..."/>
                             </div>
                         </div>
                         <div className="col-md-6">
