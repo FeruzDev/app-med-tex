@@ -4303,3 +4303,7 @@ section .content{
 .item-l1 img{
     border-radius: 10px;
 }
+
+.nextjs-toast{
+    display: none !important;
+}
