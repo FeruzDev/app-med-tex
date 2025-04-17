@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 const Questions = () => {
 
 
-        const [allBlocks, setWidth] = useState(null);
+        const [allBlocks, setAllBlocks] = useState(1);
 
 
 
@@ -21,25 +21,25 @@ const Questions = () => {
     //     }
     //
     // };
-    const handleClick = (e) => {
-        if (typeof window !== "undefined") {
-            // Barcha bloklardan .big class'ini olib tashlaymiz
-            document.querySelectorAll(".qblock").forEach(block => {
-                block.classList.remove("big");
-            });
-
-            // Bosilgan elementga .big qo'shamiz
-            const target = e.currentTarget;
-            target.classList.add("big");
-        }
-    };
+    // const handleClick = (e) => {
+    //     if (typeof window !== "undefined") {
+    //         // Barcha bloklardan .big class'ini olib tashlaymiz
+    //         document.querySelectorAll(".qblock").forEach(block => {
+    //             block.classList.remove("big");
+    //         });
+    //
+    //         // Bosilgan elementga .big qo'shamiz
+    //         const target = e.currentTarget;
+    //         target.classList.add("big");
+    //     }
+    // };
 
 
 
 
     return (
         <div className="questions">
-            <div  onClick={handleClick} className="big qblock">
+            <div  onClick={() => setAllBlocks(1)} className={allBlocks === 1 ? "big qblock" : "qblock"}>
                 <div className="text">
                     <h3>&laquo;Стоит&nbsp;ли лечить рак на&nbsp;поздних стадиях? Имеют&nbsp;ли смысл
                         паллиативные
@@ -61,7 +61,7 @@ const Questions = () => {
                     <img src="./img/que.jpg" alt=""/>
                 </div>
             </div>
-            <div onClick={handleClick} className="qblock">
+            <div onClick={() => setAllBlocks(2)} className={allBlocks === 2 ? "big qblock" : "qblock"}>
                 <div className="text">
                     <h3>&laquo;В&nbsp;каких случаях стоит получить второе мнение
                         у&nbsp;эксперта?&raquo;</h3>
@@ -99,7 +99,7 @@ const Questions = () => {
                     <img src="./img/q4.png" alt=""/>
                 </div>
             </div>
-            <div onClick={handleClick} className="qblock">
+            <div onClick={() => setAllBlocks(3)}  className={allBlocks === 3 ? "big qblock" : "qblock"}>
                 <div className="text">
                     <h3>&laquo;Как попасть на&nbsp;прием к&nbsp;Обид Собирович?&raquo;</h3>
                     <p>Вы&nbsp;можете оставить заявку на&nbsp;нашем сайте или связаться
@@ -113,7 +113,7 @@ const Questions = () => {
                     <img src="./img/q5.png" alt=""/>
                 </div>
             </div>
-            <div onClick={handleClick} className="qblock">
+            <div onClick={() => setAllBlocks(4)}  className={allBlocks === 4 ? "big qblock" : "qblock"}>
                 <div className="text">
                     <h3>&laquo;В&nbsp;чем преимущества малоинвазивных операций?&raquo;</h3>
                     <p>Эндоскопические и&nbsp;интервенционные вмешательства сопровождаются меньшей
@@ -144,7 +144,7 @@ const Questions = () => {
                     <img src="./img/q3.png" alt=""/>
                 </div>
             </div>
-            <div onClick={handleClick} className="qblock">
+            <div onClick={() => setAllBlocks(5)}  className={allBlocks === 5 ? "big qblock" : "qblock"}>
                 <div className="text">
                 <h3>Что такое стентирование?</h3>
                     <p>Стент&nbsp;&mdash; короткая трубка с&nbsp;сетчатой металлической стенкой.
