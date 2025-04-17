@@ -43,7 +43,7 @@ export default function Home() {
                                 <a className="" href="tel:+998970448868">+998 97 044 88 68</a></div>
                             <div className="soc">
                                 <a href="https://t.me/+998970448868"><img
-                                    src="./img/telegram.png"
+                                    src="/img/telegram.png"
                                     height="17"/></a>
                                 <a href="#">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="17" height="11"
@@ -60,7 +60,7 @@ export default function Home() {
                         </div>
 
                         <a href="#" className="menu-burger"><img
-                            src="./img/burger.svg"/></a>
+                            src="/img/burger.svg"/></a>
                     </header>
 
 
@@ -237,7 +237,7 @@ export default function Home() {
                         <h3>КОГДА МОЖНО ПОМОЧЬ КАЖДОМУ</h3>
                         <h2>Почему пациенты обращаются к&nbsp;доктору к нам?</h2>
                         <div className="why-block">
-                            <div className="pic"><img src="./img/pic01.png"/></div>
+                            <div className="pic"><img src="/img/pic01.png"/></div>
                             <div className="text">
                                 <p>
                                     Что такое стома
@@ -482,7 +482,7 @@ export default function Home() {
 
                                 <div className="pic">
 
-                                    <img src="./img/pic02.png" alt=""/>
+                                    <img src="/img/pic02.png" alt=""/>
                                 </div>
                             </div>
 
@@ -544,7 +544,7 @@ export default function Home() {
                                 </div>
 
                                 <div className="pic">
-                                    <img src="./img/pic03.png" alt=""/>
+                                    <img src="/img/pic03.png" alt=""/>
                                 </div>
                             </div>
 
@@ -630,7 +630,7 @@ export default function Home() {
                                 </div>
 
                                 <div className="pic">
-                                    <img src="./img/pic04.png" alt=""/>
+                                    <img src="/img/pic04.png" alt=""/>
                                 </div>
                             </div>
                         </div>
@@ -750,7 +750,7 @@ export default function Home() {
                     <div className="all">
                         <div className="block">
                             <div className="count round">
-                                <div><img src="./img/prize.svg"/></div>
+                                <div><img src="/img/prize.svg"/></div>
                             </div>
                             <p>единственный специалист
 
@@ -760,13 +760,13 @@ export default function Home() {
 
                         <div className="block">
                             <div className="count round">
-                                <div><img src="./img/lamp.svg"/></div>
+                                <div><img src="/img/lamp.svg"/></div>
                             </div>
                             <p>внедрил малоинвазивные эндоскопические операции при ранних формах рака органов ЖКТ</p>
                         </div>
                         <div className="block">
                             <div className="count round">
-                                <div><img src="./img/stars.svg"/></div>
+                                <div><img src="/img/stars.svg"/></div>
                             </div>
                             <p>спас множестно жизней благодаря проведению ранней диагностики рака органов ЖКТ</p>
                         </div>
@@ -810,7 +810,7 @@ export default function Home() {
                             <div className="block">
                                 <div>
                                     <div className="icon">
-                                        <img src="./img/pathology05.svg"/>
+                                        <img src="/img/pathology05.svg"/>
                                     </div>
                                     <span>Рак толстого кишечника</span>
                                 </div>
@@ -818,7 +818,7 @@ export default function Home() {
                             <div className="block">
                                 <div>
                                     <div className="icon">
-                                        <img src="./img/pathology07.svg"/>
+                                        <img src="/img/pathology07.svg"/>
                                     </div>
                                     <span>Рак двенадцатиперстной кишки</span>
                                 </div>
@@ -826,7 +826,7 @@ export default function Home() {
                             <div className="block">
                                 <div>
                                     <div className="icon">
-                                        <img src="./img/pathology05.svg"/>
+                                        <img src="/img/pathology05.svg"/>
                                     </div>
                                     <span>Рак прямой  кишки</span>
                                 </div>
@@ -835,7 +835,7 @@ export default function Home() {
                             <div className="block">
                                 <div>
                                     <div className="icon">
-                                        <img src="./img/pathology01.svg"/>
+                                        <img src="/img/pathology01.svg"/>
                                     </div>
                                     <span className="text-capitalize">ГРЫЖИ ПЕРЕДНОЙБРЮШНОЙ СТЕНКИ</span>
                                 </div>
@@ -843,7 +843,7 @@ export default function Home() {
                             <div className="block">
                                 <div>
                                     <div className="icon">
-                                        <img src="./img/pathology01.svg"/>
+                                        <img src="/img/pathology01.svg"/>
                                     </div>
                                     <span className="text-capitalize">АКСИАЛЬНОЕ ГРЫЖИ ПИЩЕВОДНОЕ ОТВЕРСТИЕ ДИАФРАГМЫ</span>
                                 </div>
@@ -851,7 +851,7 @@ export default function Home() {
                             <div className="block">
                                 <div>
                                     <div className="icon">
-                                        <img src="./img/pathology01.svg"/>
+                                        <img src="/img/pathology01.svg" alt="..."/>
                                     </div>
                                     <span>Рак поджелудочной железы</span>
                                 </div>
@@ -859,7 +859,7 @@ export default function Home() {
                             {/*<div className="block">*/}
                             {/*    <div>*/}
                             {/*        <div className="icon">*/}
-                            {/*            <img src="./img/pathology02.svg"/>*/}
+                            {/*            <img src="/img/pathology02.svg"/>*/}
                             {/*        </div>*/}
                             {/*        <span>Механическая желтуха</span>*/}
                             {/*    </div>*/}
@@ -868,7 +868,7 @@ export default function Home() {
                             <div className="block">
                                 <div>
                                     <div className="icon">
-                                        <img src="./img/pathology03.svg"/>
+                                        <img src="/img/pathology03.svg"/>
                                     </div>
                                     <span>Рак желудка</span>
                                 </div>
@@ -876,7 +876,7 @@ export default function Home() {
                             <div className="block">
                                 <div>
                                     <div className="icon">
-                                        <img src="./img/pathology03.svg"/>
+                                        <img src="/img/pathology03.svg"/>
                                     </div>
                                     <span>ПОСЛЕОПЕРАЦИОНЫ ЫЕ ГРЫЖИ ПЕРЕДНЕЙ БРЮШНОЙ СТЕНКИ ЛЮБОЙ СЛОЖНОСТИ</span>
                                 </div>
@@ -884,7 +884,7 @@ export default function Home() {
                             <div className="block">
                                 <div>
                                     <div className="icon">
-                                        <img src="./img/pathology04.svg"/>
+                                        <img src="/img/pathology04.svg" alt="..."/>
                                     </div>
                                     <span>РЕКОСТРУКТИВНО-ВОСТАНОВИТЕЛЬНОЕ ОПЕРАЦИИ КИШЕЧНИКИ ЛЮБОЙ СЛОЖНОСТИ</span>
                                 </div>
@@ -893,7 +893,7 @@ export default function Home() {
                             <div className="block">
                                 <div>
                                     <div className="icon">
-                                        <img src="./img/pathology06.svg"/>
+                                        <img src="/img/pathology06.svg"/>
                                     </div>
                                     <span>Желчнокаменная болезнь</span>
                                 </div>
@@ -902,7 +902,7 @@ export default function Home() {
                             <div className="block">
                                 <div>
                                     <div className="icon">
-                                        <img src="./img/pathology08.svg"/>
+                                        <img src="/img/pathology08.svg"/>
                                     </div>
                                     <span>Доброкачественные новообразования органов ЖКТ</span>
                                 </div>
@@ -910,7 +910,7 @@ export default function Home() {
                             {/*<div className="block">*/}
                             {/*    <div>*/}
                             {/*        <div className="icon">*/}
-                            {/*            <img src="./img/pathology09.svg"/>*/}
+                            {/*            <img src="/img/pathology09.svg"/>*/}
                             {/*        </div>*/}
                             {/*        <span>Метастатический  и&nbsp;первичный рак печени</span>*/}
                             {/*    </div>*/}
@@ -918,7 +918,7 @@ export default function Home() {
                             {/*<div className="block">*/}
                             {/*    <div>*/}
                             {/*        <div className="icon">*/}
-                            {/*            <img src="./img/pathology10.svg"/>*/}
+                            {/*            <img src="/img/pathology10.svg"/>*/}
                             {/*        </div>*/}
                             {/*        <span>Рак желчного пузыря и&nbsp;желчевыводящих протоков</span>*/}
                             {/*    </div>*/}
@@ -926,7 +926,7 @@ export default function Home() {
                             {/*<div className="block">*/}
                             {/*    <div>*/}
                             {/*        <div className="icon">*/}
-                            {/*            <img src="./img/pathology11.svg"/>*/}
+                            {/*            <img src="/img/pathology11.svg"/>*/}
                             {/*        </div>*/}
                             {/*        <span>Мучительные боли при&nbsp;раке</span>*/}
                             {/*    </div>*/}
@@ -934,7 +934,7 @@ export default function Home() {
                             <div className="block">
                                 <div>
                                     <div className="icon">
-                                        <img src="./img/pathology12.svg"/>
+                                        <img src="/img/pathology12.svg"/>
                                     </div>
                                     <span>Кишечная непроходимость при&nbsp;раке</span>
                                 </div>
@@ -948,7 +948,7 @@ export default function Home() {
                         <p className="text-center mb-4 mt-0">Обид Собирович</p>
                         <div className="career">
                             <div className="block p-3">
-                                <div className="icon"><img src="./img/caree01.svg"/>
+                                <div className="icon"><img src="/img/caree01.svg"/>
                                 </div>
                                 {/*<span>2000–2006 год</span>*/}
                                 Обучение в ТАШКЕНТСКОЙ МЕДИЦИНСКОЙ АКАДЕМИИ
@@ -958,13 +958,13 @@ export default function Home() {
                                 «лечебное дело».
                             </div>
                             <div className="block p-3">
-                                <div className="icon"><img src="./img/caree02.svg"/>
+                                <div className="icon"><img src="/img/caree02.svg"/>
                                 </div>
                                 {/*<span>2000–2006 год</span>*/}
                                 Пройдена магистратура по общей хирургии в Ташкентский Медицинский Академии
                             </div>
                             <div className="block p-3">
-                                <div className="icon"><img src="./img/caree03.svg"/>
+                                <div className="icon"><img src="/img/caree03.svg"/>
                                 </div>
                                 {/*<span>2025 год</span>*/}
                                 Защита диссертации и работа
@@ -1006,7 +1006,7 @@ export default function Home() {
 
                         <div className="mission">
                             <div className="pic123 w-50">
-                                <img src="./img/kla2.jpg" className="w-100" alt=""/>
+                                <img src="/img/kla2.jpg" className="w-100" alt=""/>
 
                             </div>
                             <div className="text" id="form">

@@ -7,151 +7,8 @@ import axios from "axios";
 import {API_PATH} from "@/app/const";
 
 import toast from "bootstrap/js/src/toast";
-import Modalcha from "@/components/Modalcha";
-
-
-
 
 const ProductPage = () => {
-    // const [cart, setCart] = useState([]);
-    // const [products, setProducts ] = useState([]);
-    // const [adress, setAdress ] = useState([]);
-    // const [reg, setReg ] = useState("");
-    // const [phone, setPhone ] = useState("");
-    // const [name, setName ] = useState("");
-    //
-    // // const subtitleRef = useRef(null);
-    // // LocalStorage'dan savatni olish
-    // useEffect(() => {
-    //
-    //     if (typeof window !== "undefined") {
-    //         const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
-    //         setCart(storedCart);
-    //     }
-    //
-    // }, []);
-    //
-    // // LocalStorage'ga yozish
-    // const updateCart = (newCart) => {
-    //     setCart(newCart);
-    //     localStorage.setItem("cart", JSON.stringify(newCart));
-    // };
-    //
-    // // Savatga mahsulot qo'shish
-    // const addToCart = (product) => {
-    //     const existingProduct = cart.find((item) => item.id === product.id);
-    //     let updatedCart;
-    //
-    //     if (existingProduct) {
-    //         updatedCart = cart.map((item) =>
-    //             item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-    //         );
-    //     } else {
-    //         updatedCart = [...cart, { ...product, quantity: 1 }];
-    //     }
-    //
-    //     updateCart(updatedCart);
-    // };
-    //
-    // // Miqdorni oshirish
-    // const increaseQuantity = (id) => {
-    //     const updatedCart = cart.map((item) =>
-    //         item.id === id ? { ...item, quantity: item.quantity + 1 } : item
-    //     );
-    //     updateCart(updatedCart);
-    // };
-    //
-    // // Miqdorni kamaytirish
-    // const decreaseQuantity = (id) => {
-    //     const updatedCart = cart
-    //         .map((item) =>
-    //             item.id === id ? { ...item, quantity: item.quantity - 1 } : item
-    //         )
-    //         .filter((item) => item.quantity > 0);
-    //     updateCart(updatedCart);
-    // };
-    //
-    // // Savatdan o'chirish
-    // const removeFromCart = (id) => {
-    //     const updatedCart = cart.filter((item) => item.id !== id);
-    //     updateCart(updatedCart);
-    // };
-    //
-    // const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    //
-    // const sendOrder = () => {
-    //
-    //   axios.post(API_PATH + "order/", {
-    //
-    //       "client_name": name,
-    //       "phone_number": phone,
-    //       "status": "pn",
-    //       "region": reg,
-    //       "order_items": cart?.map((item) => {
-    //          return {
-    //              product_id: item.id,
-    //              quantity: item.quantity
-    //          }
-    //       }),
-    //   })
-    //       .then(res => {
-    //           toast.success("Заказ успешно отправлен!");
-    //           setIsOpen(false);
-    //       })
-    //     .catch(err => {
-    //         toast.error("Ошибка");
-    //     })
-    // }
-    //
-    //
-    //
-    //     let subtitle;
-    //     const [modalIsOpen, setIsOpen] = React.useState(false);
-    //
-    //     function openModal() {
-    //         setIsOpen(true);
-    //     }
-    //
-    //     // function afterOpenModal() {
-    //     //     // references are now sync'd and can be accessed.
-    //     //     subtitle.style.color = '#f00';
-    //     // }
-    // // function afterOpenModal() {
-    // //     if (subtitleRef.current) {
-    // //         subtitleRef.current.style.color = '#f00';
-    // //     }
-    // // }
-    //
-    //
-    //     function closeModal() {
-    //         setIsOpen(false);
-    //     }
-    //
-    // useEffect(() =>{
-    //      axios.get(API_PATH + "product/")
-    //          .then(res => {
-    //              setProducts(res.data?.results);
-    //          })
-    //
-    //
-    //      axios.get(API_PATH + "regions-statuses/")
-    //          .then(res => {
-    //              setAdress(res.data?.regions);
-    //          })
-    //
-    //     safeJSONParse(cart)
-    //
-    // }, [])
-    //
-    // function safeJSONParse(str) {
-    //     try {
-    //         return JSON.parse(str);
-    //     } catch (error) {
-    //         console.error("JSON parsing xatosi:", error.message);
-    //         return null;
-    //     }
-    // }
-
 
     const [cart, setCart] = useState([]); // localStorage o'chirildi
     const [products, setProducts] = useState([]);
@@ -166,11 +23,10 @@ const ProductPage = () => {
     };
 
     const addToCart = (product) => {
-        const existingProduct = cart.find((item) => item.id === product.id);
+        const existingProduct = cart?.find((item) => item.id === product.id);
         let updatedCart;
-
         if (existingProduct) {
-            updatedCart = cart.map((item) =>
+            updatedCart = cart?.map((item) =>
                 item.id === product.id
                     ? { ...item, quantity: item.quantity + 1 }
                     : item
@@ -178,12 +34,10 @@ const ProductPage = () => {
         } else {
             updatedCart = [...cart, { ...product, quantity: 1 }];
         }
-
         updateCart(updatedCart);
     };
-
     const increaseQuantity = (id) => {
-        const updatedCart = cart.map((item) =>
+        const updatedCart = cart?.map((item) =>
             item.id === id ? { ...item, quantity: item.quantity + 1 } : item
         );
         updateCart(updatedCart);
@@ -345,51 +199,7 @@ const ProductPage = () => {
             </div>
 
 
-            {/*<Modalcha*/}
-            {/*    modalIsOpen={modalIsOpen}*/}
-            {/*    closeModal={closeModal}*/}
-            {/*    adress={adress}*/}
-            {/*    setReg={setReg}*/}
-            {/*    setName={setName}*/}
-            {/*    setPhone={setPhone}*/}
-            {/*    phone={phone}*/}
-            {/*    name={name}*/}
-            {/*    reg={reg} */}
-            {/*/>*/}
 
-            {/*<Modal*/}
-            {/*    isOpen={modalIsOpen}*/}
-            {/*    // onAfterOpen={afterOpenModal}*/}
-            {/*    onRequestClose={closeModal}*/}
-            {/*    style={customStyles}*/}
-            {/*    contentLabel="Example Modal"*/}
-            {/*>*/}
-
-            {/*        <div className="d-flex justify-content-end">*/}
-            {/*            /!*<h2 ref={(_subtitle) => (subtitle = _subtitle)}> </h2>*!/*/}
-            {/*            <button onClick={closeModal} className="border-0 bg-transparent p-0" style={{width: "16px"}}>*/}
-            {/*                <img className="w-100" src="/img/close.png" alt="...."/>*/}
-            {/*            </button>*/}
-            {/*        </div>*/}
-
-            {/*    <div className="order-box mt-2" style={{width: "300px"}}>*/}
-            {/*        <label className="form-label">Имя Фамилия</label>*/}
-            {/*        <input type="text" className="form-control w-100 mt-1 mb-2" onChange={(e) => setName(e.target.value)}/>*/}
-            {/*        <label className="form-label">Номер телефона</label>*/}
-            {/*        <input type="text" className="form-control w-100 mt-1 mb-2" onChange={(e) => setPhone(e.target.value)}/>*/}
-            {/*        <label className="form-label" >Адрес</label>*/}
-            {/*        <select className="form-control mt-1 w-100" onChange={(e) => setReg(e.target.value)}>*/}
-            {/*            <option></option>*/}
-
-            {/*            {*/}
-            {/*                adress.map((item, index) => (*/}
-            {/*                    <option key={index} value={item.label}>{item?.name}</option>*/}
-            {/*                ))*/}
-            {/*            }*/}
-            {/*        </select>*/}
-            {/*        <button className="mt-4 w-100 btn btn-success" disabled={!reg || !name || !phone} onClick={() => sendOrder()}>Заказ</button>*/}
-            {/*    </div>*/}
-            {/*</Modal>*/}
 
         </div>
     );

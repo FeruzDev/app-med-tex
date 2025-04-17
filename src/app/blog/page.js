@@ -6,34 +6,6 @@ import Link from "next/link";
 import {Menu} from 'antd';
 import axios from "axios";
 import {API_PATH} from "@/app/const";
-
-const items = [
-
-    {
-        key: 'sub4',
-        label: 'Navigation Three',
-        children: [
-            {key: '91', label: 'Option 9'},
-            {key: '120', label: 'Option 10'},
-            {key: '312', label: 'Option 11'},
-            {key: '31221', label: 'Option 12'},
-        ],
-    },
-
-    {
-        key: 'sub5',
-        label: 'Navigation Four',
-        children: [
-            {key: '9312', label: 'Option 9'},
-            {key: '1320', label: 'Option 10'},
-            {key: '12311', label: 'Option 11'},
-            {key: '122321', label: 'Option 12'},
-        ],
-    },
-
-];
-
-
 const Blog = () => {
 const [menus, setMenus] = useState([]);
 const [blogs, setBlogs] = useState({});
@@ -75,7 +47,6 @@ useEffect(() => {
         })
 }, [])
     return (
-
         <div>
             <section className="mb-0 w-100">
                 <header className='container' style={{height: '80px'}}>
