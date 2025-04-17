@@ -29,6 +29,7 @@ const ProductPage = () => {
     const [phone, setPhone ] = useState("");
     const [name, setName ] = useState("");
 
+    // const subtitleRef = useRef(null);
     // LocalStorage'dan savatni olish
     useEffect(() => {
 
@@ -120,10 +121,16 @@ const ProductPage = () => {
             setIsOpen(true);
         }
 
-        function afterOpenModal() {
-            // references are now sync'd and can be accessed.
-            subtitle.style.color = '#f00';
-        }
+        // function afterOpenModal() {
+        //     // references are now sync'd and can be accessed.
+        //     subtitle.style.color = '#f00';
+        // }
+    // function afterOpenModal() {
+    //     if (subtitleRef.current) {
+    //         subtitleRef.current.style.color = '#f00';
+    //     }
+    // }
+
 
         function closeModal() {
             setIsOpen(false);
@@ -141,8 +148,19 @@ const ProductPage = () => {
                  setAdress(res.data?.regions);
              })
 
+        safeJSONParse(cart)
 
     }, [])
+
+    function safeJSONParse(str) {
+        try {
+            return JSON.parse(str);
+        } catch (error) {
+            console.error("JSON parsing xatosi:", error.message);
+            return null;
+        }
+    }
+
 
     return (
         <div>
@@ -240,14 +258,14 @@ const ProductPage = () => {
 
             <Modal
                 isOpen={modalIsOpen}
-                onAfterOpen={afterOpenModal}
+                // onAfterOpen={afterOpenModal}
                 onRequestClose={closeModal}
                 style={customStyles}
                 contentLabel="Example Modal"
             >
 
-                    <div className="d-flex justify-content-between">
-                        <h2 ref={(_subtitle) => (subtitle = _subtitle)}> </h2>
+                    <div className="d-flex justify-content-end">
+                        {/*<h2 ref={(_subtitle) => (subtitle = _subtitle)}> </h2>*/}
                         <button onClick={closeModal} className="border-0 bg-transparent p-0" style={{width: "16px"}}>
                             <img className="w-100" src="/img/close.png" alt=""/>
                         </button>
