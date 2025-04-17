@@ -1,17 +1,26 @@
 "use client"; // 👈 BUNI ALBATTA YOZING!!
-import React from 'react';
+import React, {useState} from 'react';
 
 const Questions = () => {
 
 
+        const [allBlocks, setWidth] = useState(null);
+
+
+
+
+
     const handleClick = (e) => {
-        const allBlocks = document.querySelectorAll(".qblock");
+        setWidth(document.querySelectorAll(".qblock"));
 
         allBlocks.forEach(block => block.classList.remove("big"));
 
         const target = e.currentTarget;
         target.classList.add("big");
     };
+
+
+
     return (
         <div className="questions">
             <div  onClick={handleClick} className="big qblock">
