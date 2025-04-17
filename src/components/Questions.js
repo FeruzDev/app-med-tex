@@ -1,4 +1,4 @@
-"use client"; // 👈 BUNI ALBATTA YOZING!!
+"use client";
 import React, {useState} from 'react';
 
 const Questions = () => {
@@ -10,17 +10,30 @@ const Questions = () => {
 
 
 
+    // const handleClick = (e) => {
+    //     if (typeof window !== "undefined" && subtitle) {
+    //         setWidth(document.querySelectorAll(".qblock"));
+    //
+    //         allBlocks.forEach(block => block.classList.remove("big"));
+    //
+    //         const target = e.currentTarget;
+    //         target.classList.add("big");
+    //     }
+    //
+    // };
     const handleClick = (e) => {
-        if (typeof window !== "undefined" && subtitle) {
-            setWidth(document.querySelectorAll(".qblock"));
+        if (typeof window !== "undefined") {
+            // Barcha bloklardan .big class'ini olib tashlaymiz
+            document.querySelectorAll(".qblock").forEach(block => {
+                block.classList.remove("big");
+            });
 
-            allBlocks.forEach(block => block.classList.remove("big"));
-
+            // Bosilgan elementga .big qo'shamiz
             const target = e.currentTarget;
             target.classList.add("big");
         }
-
     };
+
 
 
 

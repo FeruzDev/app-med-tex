@@ -89,9 +89,6 @@ const ProductPage = () => {
 
     const sendOrder = () => {
 
-
-        console.log(cart);
-
       axios.post(API_PATH + "order/", {
 
           "client_name": name,
@@ -146,6 +143,7 @@ const ProductPage = () => {
 
 
     }, [])
+
     return (
         <div>
             <header className='container' style={{ height: '80px' }}>
