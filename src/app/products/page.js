@@ -171,8 +171,8 @@ const ProductPage = () => {
                     <div className="col-md-8">
                         <div className="row">
                                 {products.map((product) => (
-                                    <div className="col-md-6 pb-3">
-                                    <div key={product.id} className={styles.product}>
+                                    <div key={product.id} className="col-md-6 pb-3">
+                                    <div  className={styles.product}>
                                         <img src={product.photo} alt="image" />
                                         <div className={styles.productInfo}>
                                             <div>
