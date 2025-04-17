@@ -22,38 +22,167 @@ const customStyles = {
 
 
 const ProductPage = () => {
-    const [cart, setCart] = useState([]);
-    const [products, setProducts ] = useState([]);
-    const [adress, setAdress ] = useState([]);
-    const [reg, setReg ] = useState("");
-    const [phone, setPhone ] = useState("");
-    const [name, setName ] = useState("");
+    // const [cart, setCart] = useState([]);
+    // const [products, setProducts ] = useState([]);
+    // const [adress, setAdress ] = useState([]);
+    // const [reg, setReg ] = useState("");
+    // const [phone, setPhone ] = useState("");
+    // const [name, setName ] = useState("");
+    //
+    // // const subtitleRef = useRef(null);
+    // // LocalStorage'dan savatni olish
+    // useEffect(() => {
+    //
+    //     if (typeof window !== "undefined") {
+    //         const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    //         setCart(storedCart);
+    //     }
+    //
+    // }, []);
+    //
+    // // LocalStorage'ga yozish
+    // const updateCart = (newCart) => {
+    //     setCart(newCart);
+    //     localStorage.setItem("cart", JSON.stringify(newCart));
+    // };
+    //
+    // // Savatga mahsulot qo'shish
+    // const addToCart = (product) => {
+    //     const existingProduct = cart.find((item) => item.id === product.id);
+    //     let updatedCart;
+    //
+    //     if (existingProduct) {
+    //         updatedCart = cart.map((item) =>
+    //             item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+    //         );
+    //     } else {
+    //         updatedCart = [...cart, { ...product, quantity: 1 }];
+    //     }
+    //
+    //     updateCart(updatedCart);
+    // };
+    //
+    // // Miqdorni oshirish
+    // const increaseQuantity = (id) => {
+    //     const updatedCart = cart.map((item) =>
+    //         item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+    //     );
+    //     updateCart(updatedCart);
+    // };
+    //
+    // // Miqdorni kamaytirish
+    // const decreaseQuantity = (id) => {
+    //     const updatedCart = cart
+    //         .map((item) =>
+    //             item.id === id ? { ...item, quantity: item.quantity - 1 } : item
+    //         )
+    //         .filter((item) => item.quantity > 0);
+    //     updateCart(updatedCart);
+    // };
+    //
+    // // Savatdan o'chirish
+    // const removeFromCart = (id) => {
+    //     const updatedCart = cart.filter((item) => item.id !== id);
+    //     updateCart(updatedCart);
+    // };
+    //
+    // const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    //
+    // const sendOrder = () => {
+    //
+    //   axios.post(API_PATH + "order/", {
+    //
+    //       "client_name": name,
+    //       "phone_number": phone,
+    //       "status": "pn",
+    //       "region": reg,
+    //       "order_items": cart?.map((item) => {
+    //          return {
+    //              product_id: item.id,
+    //              quantity: item.quantity
+    //          }
+    //       }),
+    //   })
+    //       .then(res => {
+    //           toast.success("Заказ успешно отправлен!");
+    //           setIsOpen(false);
+    //       })
+    //     .catch(err => {
+    //         toast.error("Ошибка");
+    //     })
+    // }
+    //
+    //
+    //
+    //     let subtitle;
+    //     const [modalIsOpen, setIsOpen] = React.useState(false);
+    //
+    //     function openModal() {
+    //         setIsOpen(true);
+    //     }
+    //
+    //     // function afterOpenModal() {
+    //     //     // references are now sync'd and can be accessed.
+    //     //     subtitle.style.color = '#f00';
+    //     // }
+    // // function afterOpenModal() {
+    // //     if (subtitleRef.current) {
+    // //         subtitleRef.current.style.color = '#f00';
+    // //     }
+    // // }
+    //
+    //
+    //     function closeModal() {
+    //         setIsOpen(false);
+    //     }
+    //
+    // useEffect(() =>{
+    //      axios.get(API_PATH + "product/")
+    //          .then(res => {
+    //              setProducts(res.data?.results);
+    //          })
+    //
+    //
+    //      axios.get(API_PATH + "regions-statuses/")
+    //          .then(res => {
+    //              setAdress(res.data?.regions);
+    //          })
+    //
+    //     safeJSONParse(cart)
+    //
+    // }, [])
+    //
+    // function safeJSONParse(str) {
+    //     try {
+    //         return JSON.parse(str);
+    //     } catch (error) {
+    //         console.error("JSON parsing xatosi:", error.message);
+    //         return null;
+    //     }
+    // }
 
-    // const subtitleRef = useRef(null);
-    // LocalStorage'dan savatni olish
-    useEffect(() => {
 
-        if (typeof window !== "undefined") {
-            const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
-            setCart(storedCart);
-        }
+    const [cart, setCart] = useState([]); // localStorage o'chirildi
+    const [products, setProducts] = useState([]);
+    const [adress, setAdress] = useState([]);
+    const [reg, setReg] = useState("");
+    const [phone, setPhone] = useState("");
+    const [name, setName] = useState("");
 
-    }, []);
-
-    // LocalStorage'ga yozish
+    // LocalStorage O‘RNIGA oddiy state orqali savatni yangilash
     const updateCart = (newCart) => {
         setCart(newCart);
-        localStorage.setItem("cart", JSON.stringify(newCart));
     };
 
-    // Savatga mahsulot qo'shish
     const addToCart = (product) => {
         const existingProduct = cart.find((item) => item.id === product.id);
         let updatedCart;
 
         if (existingProduct) {
             updatedCart = cart.map((item) =>
-                item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+                item.id === product.id
+                    ? { ...item, quantity: item.quantity + 1 }
+                    : item
             );
         } else {
             updatedCart = [...cart, { ...product, quantity: 1 }];
@@ -62,7 +191,6 @@ const ProductPage = () => {
         updateCart(updatedCart);
     };
 
-    // Miqdorni oshirish
     const increaseQuantity = (id) => {
         const updatedCart = cart.map((item) =>
             item.id === id ? { ...item, quantity: item.quantity + 1 } : item
@@ -70,7 +198,6 @@ const ProductPage = () => {
         updateCart(updatedCart);
     };
 
-    // Miqdorni kamaytirish
     const decreaseQuantity = (id) => {
         const updatedCart = cart
             .map((item) =>
@@ -80,87 +207,58 @@ const ProductPage = () => {
         updateCart(updatedCart);
     };
 
-    // Savatdan o'chirish
     const removeFromCart = (id) => {
         const updatedCart = cart.filter((item) => item.id !== id);
         updateCart(updatedCart);
     };
 
-    const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    const totalPrice = cart.reduce(
+        (sum, item) => sum + item.price * item.quantity,
+        0
+    );
 
     const sendOrder = () => {
+        axios
+            .post(API_PATH + "order/", {
+                client_name: name,
+                phone_number: phone,
+                status: "pn",
+                region: reg,
+                order_items: cart?.map((item) => {
+                    return {
+                        product_id: item.id,
+                        quantity: item.quantity,
+                    };
+                }),
+            })
+            .then((res) => {
+                toast.success("Заказ успешно отправлен!");
+                setIsOpen(false);
+            })
+            .catch((err) => {
+                toast.error("Ошибка");
+            });
+    };
 
-      axios.post(API_PATH + "order/", {
+    const [modalIsOpen, setIsOpen] = useState(false);
 
-          "client_name": name,
-          "phone_number": phone,
-          "status": "pn",
-          "region": reg,
-          "order_items": cart?.map((item) => {
-             return {
-                 product_id: item.id,
-                 quantity: item.quantity
-             }
-          }),
-      })
-          .then(res => {
-              toast.success("Заказ успешно отправлен!");
-              setIsOpen(false);
-          })
-        .catch(err => {
-            toast.error("Ошибка");
-        })
+    function openModal() {
+        setIsOpen(true);
     }
 
-
-
-        let subtitle;
-        const [modalIsOpen, setIsOpen] = React.useState(false);
-
-        function openModal() {
-            setIsOpen(true);
-        }
-
-        // function afterOpenModal() {
-        //     // references are now sync'd and can be accessed.
-        //     subtitle.style.color = '#f00';
-        // }
-    // function afterOpenModal() {
-    //     if (subtitleRef.current) {
-    //         subtitleRef.current.style.color = '#f00';
-    //     }
-    // }
-
-
-        function closeModal() {
-            setIsOpen(false);
-        }
-
-    useEffect(() =>{
-         axios.get(API_PATH + "product/")
-             .then(res => {
-                 setProducts(res.data?.results);
-             })
-
-
-         axios.get(API_PATH + "regions-statuses/")
-             .then(res => {
-                 setAdress(res.data?.regions);
-             })
-
-        safeJSONParse(cart)
-
-    }, [])
-
-    function safeJSONParse(str) {
-        try {
-            return JSON.parse(str);
-        } catch (error) {
-            console.error("JSON parsing xatosi:", error.message);
-            return null;
-        }
+    function closeModal() {
+        setIsOpen(false);
     }
 
+    useEffect(() => {
+        axios.get(API_PATH + "product/").then((res) => {
+            setProducts(res.data?.results);
+        });
+
+        axios.get(API_PATH + "regions-statuses/").then((res) => {
+            setAdress(res.data?.regions);
+        });
+    }, []);
 
     return (
         <div>
@@ -267,7 +365,7 @@ const ProductPage = () => {
                     <div className="d-flex justify-content-end">
                         {/*<h2 ref={(_subtitle) => (subtitle = _subtitle)}> </h2>*/}
                         <button onClick={closeModal} className="border-0 bg-transparent p-0" style={{width: "16px"}}>
-                            <img className="w-100" src="/img/close.png" alt=""/>
+                            <img className="w-100" src="/img/close.png" alt="...."/>
                         </button>
                     </div>
 
