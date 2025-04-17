@@ -6,7 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="c2b26f38-b31e-487a-bbda-08cd577f9423" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/products/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/products/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Questions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/commonba7f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/forme83f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/jquery-latest.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/jquery.fancybox.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/jquery.leanModal.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/jquery.maskedinput.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/owl.carousel.min.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +97,7 @@
       <workItem from="1743678726606" duration="48585000" />
       <workItem from="1744189147410" duration="1620000" />
       <workItem from="1744344845107" duration="27859000" />
-      <workItem from="1744863305276" duration="4901000" />
+      <workItem from="1744863305276" duration="5738000" />
     </task>
     <servers />
   </component>

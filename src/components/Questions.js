@@ -11,12 +11,15 @@ const Questions = () => {
 
 
     const handleClick = (e) => {
-        setWidth(document.querySelectorAll(".qblock"));
+        if (typeof window !== "undefined" && subtitle) {
+            setWidth(document.querySelectorAll(".qblock"));
 
-        allBlocks.forEach(block => block.classList.remove("big"));
+            allBlocks.forEach(block => block.classList.remove("big"));
 
-        const target = e.currentTarget;
-        target.classList.add("big");
+            const target = e.currentTarget;
+            target.classList.add("big");
+        }
+
     };
 
 

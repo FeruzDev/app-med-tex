@@ -1,7 +1,7 @@
 import styles from "./page.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
-import "../js/commonba7f";
+// import "../js/commonba7f";
 import Questions from "@/components/Questions";
 import React from "react";
 import Review from "@/components/Review";
